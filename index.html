@@ -1,0 +1,24 @@
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=divice-width, initial-scale=1.0">
+        <title> Lista de Usuários</title>
+        <link rel="stylesheet" href="{{  url_for('stacic', filename='styles.css') }}">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Lista de Usuários</h1>
+            <form action="/adicionar">method="POST"
+            <input type="text" name="nome" placeholder="Nome" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <button type="submit">adicionar</button>
+            </form>
+            <ul>
+                {% for Usuario in Usuarios %}
+                    <li>{{ Usuario[1] }} - {{ Usuario[2] }}</li>
+                {% enfor %}
+
+            </ul>
+        </div>
+    </body>
+</html>
