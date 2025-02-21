@@ -1,24 +1,49 @@
+<!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=divice-width, initial-scale=1.0">
-        <title> Lista de Usuários</title>
-        <link rel="stylesheet" href="{{  url_for('stacic', filename='styles.css') }}">
-    </head>
-    <body>
-        <div class="container">
-            <h1>Lista de Usuários</h1>
-            <form action="/adicionar">method="POST"
-            <input type="text" name="nome" placeholder="Nome" required>
-            <input type="email" name="email" placeholder="Email" required>
-            <button type="submit">adicionar</button>
-            </form>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Animes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Super Animes</h1>
+        <nav>
             <ul>
-                {% for Usuario in Usuarios %}
-                    <li>{{ Usuario[1] }} - {{ Usuario[2] }}</li>
-                {% enfor %}
-
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Lista de Animes</a></li>
+                <li><a href="#">Lançamentos da temporada</a></li>
+                <li><a href="#">Contato</a></li>
             </ul>
+        </nav>
+    </header>
+    
+    <section class="banner">
+        <h2>Assista aos melhores animes online</h2>
+    </section>
+    
+    <section class="anime-list">
+        <h2>Lista de Animes</h2>
+        <div class="anime">
+            <img src="naruto.jpg" alt="Naruto">
+            <h3>Naruto</h3>
+            <a href="naruto.html" class="btn">Assistir</a>
+            <img src="onepiece.jpg" alt="One Piece">
+            <h3>One Piece</h3>
+            <a href="onepiece.html" class="btn">Assistir</a>
+            <img src="dragonball.jpg" alt="dragonball">
+            <h3>Dragon Ball </h3>
+            <a href="dragonball.html" class="btn">Assistir</a>
+            <img src="cavaleirosdozodiaco.jpg" alt="Os Cavaleiros do Zodiaco">
+            <h3>Os Cavaleiros do Zodiaco</h3>
+            <a href="cavaleirosdozodiaco.html" class="btn">Assistir</a>
+            <img src="digimon.jpg" alt="Digimon">
+            <h3>Digimon</h3>
+            <a href="digimon.html" class="btn">Assistir</a>
+            
+
         </div>
-    </body>
+    </section>
+</body>
 </html>
